@@ -4,7 +4,11 @@
  */
 const rgbToHexConversion = (...rgbValues) => {
   function rgb(r, g, b) {
-    return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+    if (rgb.length > 255) {
+      console.log("Invalid Input");
+    } else {
+      return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+    }
   }
   console.log(rgb(10, 10, 10));
 };
