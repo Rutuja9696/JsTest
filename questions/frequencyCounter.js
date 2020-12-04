@@ -6,6 +6,8 @@ Count the frequency of a vowels in a given string.
 3. In case numbers are passed it shoul throw an error with message "Invalid Input"
 */
 
-const frequencyCounter = (str) => {};
-
+const frequencyCounter = (str) => {
+  return str.split("a").length - 1;
+};
+console.log(frequencyCounter("Sufrboard"));
 module.exports = frequencyCounter;
