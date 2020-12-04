@@ -9,5 +9,5 @@ Count the frequency of a vowels in a given string.
 const frequencyCounter = (str) => {
   return str.split("a").length - 1;
 };
-console.log(frequencyCounter("Sufrboard"));
+console.log(frequencyCounter("Surfboard"));
 module.exports = frequencyCounter;

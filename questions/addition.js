@@ -5,23 +5,27 @@
 */
 
 const addition = (...numbers) => {
-  // all your code
-  var addition = numbers.reduce(function (a, b) {
+  try {
+    // all your code
     if (numbers.length == 0) {
-      console.log("Invalid Input");
-      return;
-    } else {
-      for (let i of numbers) {
-        if (!isNaN(i)) {
-          return a + b;
+      throw new Error("Invalid Input");
+    } else if (numbers.length != 0) {
+      var add;
+      numbers.forEach((num) => {
+        if (typeof num !== "number") {
+          throw new Error("Invalid Input");
         } else {
-          console.log("Invalid Input");
-          return;
+          add = numbers.reduce((a = 0, num) => {
+            a = a + num;
+            return a;
+          });
         }
-      }
+      });
+      return add;
     }
-  }, 0);
-  console.log(addition);
+  } catch (err) {
+    throw err;
+  }
 };
 addition(10, 20, 30);
 module.exports = addition;
