@@ -6,6 +6,10 @@
 
 const addition = (...numbers) => {
   // all your code
+  var addition = numbers.reduce(function (a, b) {
+    return a + b;
+  }, 0);
+  console.log(addition);
 };
-
+addition(10, 20, 30);
 module.exports = addition;
