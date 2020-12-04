@@ -7,7 +7,11 @@
 const addition = (...numbers) => {
   // all your code
   var addition = numbers.reduce(function (a, b) {
-    return a + b;
+    if (numbers.length == 0) {
+      console.log("Invalid Input");
+    } else {
+      return a + b;
+    }
   }, 0);
   console.log(addition);
 };
