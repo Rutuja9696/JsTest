@@ -9,8 +9,16 @@ const addition = (...numbers) => {
   var addition = numbers.reduce(function (a, b) {
     if (numbers.length == 0) {
       console.log("Invalid Input");
+      return;
     } else {
-      return a + b;
+      for (let i of numbers) {
+        if (!isNaN(i)) {
+          return a + b;
+        } else {
+          console.log("Invalid Input");
+          return;
+        }
+      }
     }
   }, 0);
   console.log(addition);
